@@ -1,5 +1,3 @@
-Sure, here's a basic `README.md` file for your trivia quiz app:
-
 ```markdown
 # Trivia Quiz App
 
