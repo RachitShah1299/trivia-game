@@ -3,6 +3,7 @@ import { useQuizScoreStore } from "../stores/scoreStore";
 
 const Result = () => {
   const overallTestScore = useQuizScoreStore((state) => state.overallTestScore);
+  const resetScores = useQuizScoreStore((state) => state.resetScores);
 
   return (
     <div className="max-w-md mx-auto p-4 bg-white shadow-md rounded-lg">
@@ -12,6 +13,7 @@ const Result = () => {
       </p>
       <Link
         to="/"
+        onClick={() => resetScores()}
         className="mt-4 block w-full text-center bg-indigo-700 text-white text-lg uppercase font-semibold py-3 rounded-lg hover:bg-indigo-600 transition duration-300"
       >
         Start New Quiz

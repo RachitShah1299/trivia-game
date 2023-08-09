@@ -5,7 +5,7 @@ import { QuizConfig } from "../stores/quizStore";
 
 type QuizFormProps = {
   onSubmit: (formData: QuizConfig) => void;
-}
+};
 
 const QuizForm = ({ onSubmit }: QuizFormProps) => {
   const {
@@ -32,7 +32,6 @@ const QuizForm = ({ onSubmit }: QuizFormProps) => {
       category: Number(data.category),
       difficulty: data.difficulty,
     };
-
     onSubmit(formData);
   };
 

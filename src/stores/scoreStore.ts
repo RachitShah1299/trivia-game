@@ -5,6 +5,7 @@ type QuizStore = {
   overallTestScore: [number, number];
   updateCurrentTestScore: (isCorrect: boolean) => void;
   updateOverallTestScore: (isCorrect: boolean) => void;
+  resetScores: () => void;
 };
 
 const useQuizScoreStore = create<QuizStore>((set) => ({
@@ -28,6 +29,13 @@ const useQuizScoreStore = create<QuizStore>((set) => ({
       return {
         overallTestScore: [newCorrectAnswers, questionsAnswered + 1],
       };
+    });
+  },
+
+  resetScores: () => {
+    set({
+      currentTestScore: [0, 0],
+      overallTestScore: [0, 0],
     });
   },
 }));
